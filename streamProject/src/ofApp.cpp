@@ -135,7 +135,9 @@ void ofApp::draw(){
 //    }
     panel.drawBG(0, 0,11520,2160);
     shadertoy.draw(0, 0,11520,2160);
+    ofPushMatrix();
     client.draw(3840,0,3840,2160);
+    ofPopMatrix();
     
 
 }
@@ -146,6 +148,15 @@ void ofApp::keyPressed(int key){
         case 'f':
             ofToggleFullscreen();
             break;
+    }
+    if(key == '1'){
+        shadertoy.load("shaders/tdm_Seascape1.frag");
+    }
+    if(key == '2'){
+        shadertoy.load("shaders/tdm_Seascape2.frag");
+    }
+    if(key == '3'){
+        shadertoy.load("shaders/tdm_Seascape.frag");
     }
 }
 
