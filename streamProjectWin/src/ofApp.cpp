@@ -101,7 +101,7 @@ void ofApp::draw(){
 //    }
     panel.drawBG(0, 0,11520,2160);
     shadertoy.draw(0, 0,11520,2160);
- //   client.draw(3840,0,3840,2160);
+
 	spoutReceiver.updateTexture();
 	spoutReceiver.getTexture().draw(3840, 2160, -3840, -2160);
     
@@ -118,6 +118,22 @@ void ofApp::keyPressed(int key){
             ofToggleFullscreen();
             break;
     }
+	switch (key) {
+	case '1':
+		shadertoy.load("shaders/tdm_Seascape.frag");
+		break;
+	}
+	switch (key) {
+	case '2':
+		shadertoy.load("shaders/tdm_Seascape1.frag");
+		break;
+	}
+	switch (key) {
+	case '3':
+		shadertoy.load("shaders/tdm_Seascape2.frag");
+		break;
+	}
+	
 }
 
 //--------------------------------------------------------------
